@@ -8,7 +8,7 @@
     <class>logic.Responsable</class>
     <class>logic.Secretario</class>
     <class>logic.Turno</class>
-    <class>logic.User</class>
+    <class>logic.Users</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/java_jpa"/>

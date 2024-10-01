@@ -11,45 +11,45 @@ import javax.persistence.InheritanceType;
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Person {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int id;
-    @Basic
-    private String name;
-    @Basic
-    private String lastname;
 
-    public Person() {
-    }
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  private int id;
+  @Basic
+  private String name;
+  @Basic
+  private String lastname;
 
-    public Person(String name, String lastname) {
-        this.name = name;
-        this.lastname = lastname;
-    }
+  public Person() {
+  }
 
-    public String getName() {
-        return name;
-    }
+  public Person(String name, String lastname) {
+    this.name = name;
+    this.lastname = lastname;
+  }
 
-    public int getId() {
-        return id;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-    
-    public void setName(String name) {
-        this.name = name;
-    }
+  public int getId() {
+    return id;
+  }
 
-    public String getLastname() {
-        return lastname;
-    }
+  public void setId(int id) {
+    this.id = id;
+  }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-    
-    
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getLastname() {
+    return lastname;
+  }
+
+  public void setLastname(String lastname) {
+    this.lastname = lastname;
+  }
+
 }

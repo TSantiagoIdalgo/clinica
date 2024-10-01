@@ -17,12 +17,12 @@ public class Odontologo extends Person {
     @OneToOne
     private Horario horario;
     @OneToOne
-    private User user;
+    private Users user;
 
     public Odontologo() {
     }
 
-    public Odontologo(String especialidad, ArrayList<Turno> turnos, Horario horario, User user, String name, String lastname) {
+    public Odontologo(String especialidad, ArrayList<Turno> turnos, Horario horario, Users user, String name, String lastname) {
         super(name, lastname);
         this.especialidad = especialidad;
         this.turnos = turnos;
@@ -54,11 +54,11 @@ public class Odontologo extends Person {
         this.horario = horario;
     }
 
-    public User getUser() {
+    public Users getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Users user) {
         this.user = user;
     }
     

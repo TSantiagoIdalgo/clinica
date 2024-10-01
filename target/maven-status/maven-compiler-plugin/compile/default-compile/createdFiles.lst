@@ -3,13 +3,16 @@ logic\Odontologo_.class
 logic\Odontologo.class
 logic\Turno.class
 persistence\exceptions\IllegalOrphanException.class
-logic\User_.class
+servlets\SvDeleteUser.class
 logic\Secretario_.class
 logic\Responsable_.class
 persistence\exceptions\PreexistingEntityException.class
-logic\User.class
+servlets\SvUsers.class
+servlets\SvUpdateUser.class
 persistence\HorarioJpaController.class
 persistence\PacienteJpaController.class
+logic\Users.class
+logic\Users_.class
 logic\Horario_.class
 logic\Dias.class
 persistence\TurnoJpaController.class
@@ -18,7 +21,6 @@ persistence\exceptions\NonexistentEntityException.class
 logic\ClinicaController.class
 servlets\SvLogin.class
 persistence\UserJpaController.class
-logic\Role.class
 logic\Turno_.class
 logic\Secretario.class
 com\mycompany\clinica\Person.class

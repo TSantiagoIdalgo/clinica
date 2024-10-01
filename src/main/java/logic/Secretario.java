@@ -10,12 +10,12 @@ public class Secretario extends Person {
     @Basic
     private String sector;
     @OneToOne
-    private User user;
+    private Users user;
 
     public Secretario() {
     }
 
-    public Secretario(String sector, User user, String name, String lastname) {
+    public Secretario(String sector, Users user, String name, String lastname) {
         super(name, lastname);
         this.sector = sector;
         this.user = user;
@@ -29,11 +29,11 @@ public class Secretario extends Person {
         this.sector = sector;
     }
 
-    public User getUser() {
+    public Users getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Users user) {
         this.user = user;
     }
     

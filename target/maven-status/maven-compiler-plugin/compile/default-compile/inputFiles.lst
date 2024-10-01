@@ -1,4 +1,5 @@
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\com\mycompany\clinica\Person.java
+C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\servlets\SvUsers.java
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\logic\Responsable.java
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\logic\Horario.java
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\persistence\PacienteJpaController.java
@@ -10,11 +11,13 @@ C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\persistence\exceptio
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\persistence\exceptions\NonexistentEntityException.java
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\persistence\OdontologoJpaController.java
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\logic\Odontologo.java
+C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\servlets\SvDeleteUser.java
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\servlets\SvLogin.java
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\persistence\TurnoJpaController.java
-C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\logic\User.java
+C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\logic\Users.java
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\persistence\HorarioJpaController.java
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\persistence\SecretarioJpaController.java
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\logic\ClinicaController.java
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\logic\Paciente.java
 C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\persistence\exceptions\PreexistingEntityException.java
+C:\Users\Tomas\Desktop\didactica\Java\clinica\src\main\java\servlets\SvUpdateUser.java
