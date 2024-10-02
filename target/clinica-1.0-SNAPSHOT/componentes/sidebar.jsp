@@ -38,8 +38,8 @@
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#collapseTwo">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Acciones:</h6>
-        <a class="collapse-item" href="/clinica?path=verPacientes">Ver Pacientes</a>
-        <a class="collapse-item" href="/clinica?path=altaPacientes">Alta Pacientes</a>
+        <a class="collapse-item" href="SvPacientesView">Ver Pacientes</a>
+        <a class="collapse-item" href="SvPacientes">Alta Pacientes</a>
       </div>
     </div>
   </li>
@@ -56,7 +56,7 @@
          data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Acciones:</h6>
-        <a class="collapse-item" href="/clinica?path=verOdontologos">Ver Odontologos</a>
+        <a class="collapse-item" href="SvOdontologos">Ver Odontologos</a>
         <a class="collapse-item" href="/clinica?path=altaOdontologo">Alta Odontologo</a>
       </div>
     </div>

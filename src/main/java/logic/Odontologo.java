@@ -1,5 +1,6 @@
 package logic;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.mycompany.clinica.Person;
 import java.util.ArrayList;
 import javax.persistence.Basic;
@@ -9,58 +10,64 @@ import javax.persistence.OneToOne;
 
 @Entity
 public class Odontologo extends Person {
-    @Basic
-    private String especialidad;
-    @OneToMany(mappedBy = "odontologo")
-    private ArrayList<Turno> turnos;
 
-    @OneToOne
-    private Horario horario;
-    @OneToOne
-    private Users user;
+  @Basic
+  private String especialidad;
+  @OneToMany(mappedBy = "odontologo")
+  @JsonManagedReference
+  private ArrayList<Turno> turnos;
 
-    public Odontologo() {
-    }
+  @OneToOne
+  private Horario horario;
+  @OneToOne
+  private Users user;
 
-    public Odontologo(String especialidad, ArrayList<Turno> turnos, Horario horario, Users user, String name, String lastname) {
-        super(name, lastname);
-        this.especialidad = especialidad;
-        this.turnos = turnos;
-        this.horario = horario;
-        this.user = user;
-    }
+  public Odontologo() {
+  }
 
-    public String getEspecialidad() {
-        return especialidad;
-    }
+  public Odontologo(String especialidad, ArrayList<Turno> turnos, Horario horario, Users user, String name, String lastname) {
+    super(name, lastname);
+    this.especialidad = especialidad;
+    this.turnos = turnos;
+    this.horario = horario;
+    this.user = user;
+  }
 
-    public void setEspecialidad(String especialidad) {
-        this.especialidad = especialidad;
-    }
+  public String getEspecialidad() {
+    return especialidad;
+  }
 
-    public ArrayList<Turno> getTurnos() {
-        return turnos;
-    }
+  public void setEspecialidad(String especialidad) {
+    this.especialidad = especialidad;
+  }
 
-    public void setTurnos(ArrayList<Turno> turnos) {
-        this.turnos = turnos;
-    }
+  public ArrayList<Turno> getTurnos() {
+    return turnos;
+  }
 
-    public Horario getHorario() {
-        return horario;
-    }
+  public void setTurnos(ArrayList<Turno> turnos) {
+    this.turnos = turnos;
+  }
 
-    public void setHorario(Horario horario) {
-        this.horario = horario;
-    }
+  public Horario getHorario() {
+    return horario;
+  }
 
-    public Users getUser() {
-        return user;
-    }
+  public void setHorario(Horario horario) {
+    this.horario = horario;
+  }
 
-    public void setUser(Users user) {
-        this.user = user;
-    }
-    
-    
+  public Users getUser() {
+    return user;
+  }
+
+  public void setUser(Users user) {
+    this.user = user;
+  }
+
+  @Override
+  public String toString() {
+    return "Odontologo{" + "especialidad=" + especialidad + ", turnos=" + turnos + ", horario=" + horario + ", user=" + user + '}';
+  }
+
 }

@@ -1,3 +1,5 @@
+<%@page import="logic.Odontologo"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="card o-hidden border-0 shadow-lg my-5">
   <div class="card-body p-0">
@@ -6,44 +8,58 @@
       <div class="col-lg-7">
         <div class="p-5">
           <div class="text-center">
-            <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+            <h1 class="h4 text-gray-900 mb-4">Registrar paciente</h1>
           </div>
-          <form class="user">
+          <%
+            ArrayList<Odontologo> odontologos = (ArrayList<Odontologo>) request.getSession().getAttribute("odontologos");
+            for (Odontologo odontologo : odontologos) {
+              System.out.println(odontologo.toString());
+            }
+          %>
+          <form class="user" action="SvPacientes" method="POST">
             <div class="form-group row">
               <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                       placeholder="First Name">
+                       placeholder="Nombre del paciente" name="pacienteName">
               </div>
               <div class="col-sm-6">
                 <input type="text" class="form-control form-control-user" id="exampleLastName"
-                       placeholder="Last Name">
+                       placeholder="Apellido del paciente" name="pacienteLastname">
               </div>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                     placeholder="Email Address">
+              <label for="has_os">Tiene obra social</label>
+              <select name="has_os" id="has_os" style="width: 200px">
+                <option value="true">Si</option>
+                <option value="false" selected>No</option>
+              </select>
             </div>
-            <div class="form-group row">
-              <div class="col-sm-6 mb-3 mb-sm-0">
-                <input type="password" class="form-control form-control-user"
-                       id="exampleInputPassword" placeholder="Password">
+            <div class="form-group  justify-content-sm-between">
+              <div class="d-flex flex-column">
+                <label for="fecha_turno">Seleccione la fecha del turno</label>
+                <input type="date" class="form-control form-control-user"
+                       id="fecha_turno" name="fecha_turno">
               </div>
-              <div class="col-sm-6">
-                <input type="password" class="form-control form-control-user"
-                       id="exampleRepeatPassword" placeholder="Repeat Password">
+              <div class="d-flex flex-column">
+                <label for="hora_turno">Seleccione la hora del turno</label>
+                <input type="time" class="form-control form-control-user"
+                       id="hora_turno" name="hora_turno">
+              </div>
+              <div class="d-flex flex-column">
+                <label for="odontologo_id">Selecciona el Odontologo:</label>
+                <select style="height: 50px; border-radius: 10rem; text-align: center" name="odontologo_id" id="odontologo_id" style="width: 200px">
+                  <%
+                    for (Odontologo odontologo : odontologos) {
+                  %>
+                  <option value="<%=odontologo.getId()%>"><%=odontologo.getName()%></option>
+                  <%}%>
+                </select>
               </div>
             </div>
-            <a href="login.html" class="btn btn-primary btn-user btn-block">
-              Register Account
-            </a>
+            <button type="submit" class="btn btn-primary btn-user btn-block">
+              Registrar paciente
+            </button>
           </form>
-          <hr>
-          <div class="text-center">
-            <a class="small" href="forgot-password.html">Forgot Password?</a>
-          </div>
-          <div class="text-center">
-            <a class="small" href="login.html">Already have an account? Login!</a>
-          </div>
         </div>
       </div>
     </div>

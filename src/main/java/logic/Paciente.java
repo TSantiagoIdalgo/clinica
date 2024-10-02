@@ -1,5 +1,6 @@
 package logic;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.mycompany.clinica.Person;
 import java.util.ArrayList;
 import javax.persistence.Basic;
@@ -8,35 +9,36 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Paciente extends Person {
-    @Basic
-    private boolean has_os;
-    @OneToMany(mappedBy = "paciente")
-    private ArrayList<Turno> turnos;
 
-    public Paciente() {
-    }
+  @Basic
+  private boolean has_os;
+  @OneToMany(mappedBy = "paciente")
+  @JsonManagedReference
+  private ArrayList<Turno> turnos;
 
-    public Paciente(boolean has_os, ArrayList<Turno> turnos, String name, String lastname) {
-        super(name, lastname);
-        this.has_os = has_os;
-        this.turnos = turnos;
-    }
+  public Paciente() {
+  }
 
-    public boolean isHas_os() {
-        return has_os;
-    }
+  public Paciente(boolean has_os, ArrayList<Turno> turnos, String name, String lastname) {
+    super(name, lastname);
+    this.has_os = has_os;
+    this.turnos = turnos;
+  }
 
-    public void setHas_os(boolean has_os) {
-        this.has_os = has_os;
-    }
+  public boolean isHas_os() {
+    return has_os;
+  }
 
-    public ArrayList<Turno> getTurnos() {
-        return turnos;
-    }
+  public void setHas_os(boolean has_os) {
+    this.has_os = has_os;
+  }
 
-    public void setTurnos(ArrayList<Turno> turnos) {
-        this.turnos = turnos;
-    }
-    
-    
+  public ArrayList<Turno> getTurnos() {
+    return turnos;
+  }
+
+  public void setTurnos(ArrayList<Turno> turnos) {
+    this.turnos = turnos;
+  }
+
 }
